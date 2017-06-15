@@ -1,11 +1,5 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+// 170608 현재 사용 안함
+// 추후 삭제 예정
 
 import {
   GraphQLObjectType as ObjectType,

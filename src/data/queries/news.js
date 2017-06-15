@@ -1,11 +1,5 @@
-/**
- * React Starter Kit (https://www.reactstarterkit.com/)
- *
- * Copyright © 2014-present Kriasoft, LLC. All rights reserved.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.txt file in the root directory of this source tree.
- */
+// 170608 Main page 때문에 사용 중
+// 추후 삭제해야 함
 
 import { GraphQLList as List } from 'graphql';
 import fetch from 'isomorphic-fetch';
