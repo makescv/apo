@@ -8,7 +8,10 @@ import {
 
 import DB from './models';
 import news from './queries/news';
+import me from './queries/me';
 
+
+//뭐임? object type 인가?
 const Member = new ObjectType({
   name: 'Member',
   description: 'This represents a member',
@@ -42,14 +45,15 @@ const Member = new ObjectType({
   }
 });
 
+//읽기작업
 const Query = new ObjectType({
   name: 'Query',
   description: 'This is a root query',
   fields: () => {
     return {
-      member: {
-        type: new GraphQLList(Member),
-        args: {
+      member: {   //  멤버 불러오기
+        type: new GraphQLList(Member),//위에 있는 Member type
+        args: {//매게변수
           member_id: {
             type: GraphQLInt
           },
@@ -62,10 +66,12 @@ const Query = new ObjectType({
         }
       },
       news
+      // news.js 뉴스 불러오기
     }
   }
 });
 
+//수정작업
 const Mutation = new ObjectType({
   name: 'Mutation',
   description: 'This is a mutation',
@@ -100,6 +106,8 @@ const Mutation = new ObjectType({
   },
 });
 
+//일반 타입은 그냥해도되는데
+//query, mutation만큼은 스미카 속에 넣는다
 const schema = new Schema({
   query: Query,
   mutation: Mutation

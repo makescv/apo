@@ -15,7 +15,7 @@ let lastFetchTime = new Date(1970, 0, 1);
 
 const news = {
   type: new List(NewsItemType),
-  resolve() {
+  resolve() {//프로미스//여기서 serialize db 작업하면됨
     if (lastFetchTask) {
       return lastFetchTask;
     }

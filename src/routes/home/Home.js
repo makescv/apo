@@ -48,7 +48,7 @@ class Home extends React.Component {
   }
 }
 
-export default compose(
+export default compose(//리덕스 부분 //(withStyle, graphql)까지를합성함수를 만들고, (home)을 매개변수로 전달한다
   withStyles(s),
-  graphql(newsQuery),
+  graphql(newsQuery),//graphql news 쿼리 하는부분
 )(Home);

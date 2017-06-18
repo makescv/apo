@@ -15,7 +15,7 @@ module.exports = {
   },
 
   // Database
-  databaseUrl: process.env.DATABASE_URL || 'postgres://pylotdev@localhost:5432/pylotdev',
+  databaseUrl: process.env.DATABASE_URL || 'postgres://pylotdev:12345@localhost:5432/pylotdev',//비번 있는걸로 수정
 
   // Web analytics
   analytics: {
